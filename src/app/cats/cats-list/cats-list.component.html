@@ -1,1 +1,10 @@
-<p>cats-list works!</p>
+<div class="container">
+  <p *ngIf="loadedBreeds && loadedBreeds.length < 1">Loading...</p>
+  <div class="row">
+    <ul *ngIf="loadedBreeds && loadedBreeds.length >= 1">
+      <li *ngFor="let breed of loadedBreeds" class="col-5">
+        <p class="breed-name">{{ breed.name }}</p>
+      </li>
+    </ul>
+  </div>
+</div>

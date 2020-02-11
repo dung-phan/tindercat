@@ -1,5 +1,8 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
+
 import { AppComponent } from "./app.component";
 import { NavigationComponent } from "./navigation/navigation.component";
 import { CatsComponent } from "./cats/cats.component";
@@ -15,7 +18,7 @@ import { HomeComponent } from "./home/home.component";
     CatsListComponent,
     HomeComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })

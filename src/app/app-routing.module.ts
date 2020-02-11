@@ -11,11 +11,11 @@ const appRoutes: Routes = [
   },
   {
     path: "browse",
-    component: CatsListComponent
+    component: CatsComponent
   },
   {
     path: "wikipedicat",
-    component: CatsComponent
+    component: CatsListComponent
   }
 ];
 @NgModule({
