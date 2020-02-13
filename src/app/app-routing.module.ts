@@ -4,6 +4,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { CatsComponent } from "./cats/cats.component";
 import { CatsListComponent } from "./cats/cats-list/cats-list.component";
+import { CatsDetailsComponent } from "./cats/cats-list/cats-details/cats-details.component";
 const appRoutes: Routes = [
   {
     path: "",
@@ -11,11 +12,15 @@ const appRoutes: Routes = [
   },
   {
     path: "browse",
-    component: CatsListComponent
+    component: CatsComponent
   },
   {
     path: "wikipedicat",
-    component: CatsComponent
+    component: CatsListComponent
+  },
+  {
+    path: "wikipedicat/:breedId",
+    component: CatsDetailsComponent
   }
 ];
 @NgModule({

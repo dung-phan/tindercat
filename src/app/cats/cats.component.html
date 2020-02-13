@@ -1,1 +1,10 @@
-<p>cats works!</p>
+<div class="card">
+  <img *ngIf="loadCat" [src]="loadCat.url" alt="{{ loadCat.id }}" />
+</div>
+<div class="footer">
+  <button id="swipe_dislike" class="rate"></button>
+
+  <div class="info"></div>
+
+  <button id="swipe_like" class="rate"></button>
+</div>
