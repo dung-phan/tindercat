@@ -8,6 +8,7 @@ import { Cat } from "../cats/cats.model";
 })
 export class CatsComponent implements OnInit {
   loadCat: Cat;
+  loadCats;
   constructor(private http: HttpClient) {}
   ngOnInit(): void {
     this.fetchCats();
@@ -20,7 +21,30 @@ export class CatsComponent implements OnInit {
       })
       .subscribe(cats => {
         console.log("any cat", cats);
+        this.loadCats = cats;
         this.loadCat = cats[0];
       });
+  }
+  voteUp(postData: { image_id: string; value: 1 }) {
+    console.log("check cat?", this.loadCat);
+    console.log("check cats?", this.loadCats);
+
+    this.http
+      .post("https://api.thecatapi.com/v1/votes", postData)
+      .subscribe(response => {
+        console.log("any response", response);
+      });
+    let cats = this.loadCats;
+    this.loadCat = cats[Math.floor(Math.random() * 26)];
+  }
+  voteDown(postData: { image_id: string; value: 0 }) {
+    console.log("chech cat?", this.loadCat);
+    this.http
+      .post("https://api.thecatapi.com/v1/votes", postData)
+      .subscribe(response => {
+        console.log("any response", response);
+      });
+    let cats = this.loadCats;
+    this.loadCat = cats[Math.floor(Math.random() * 26)];
   }
 }

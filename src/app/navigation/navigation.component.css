@@ -8,9 +8,12 @@ li {
 }
 a {
   font-size: 1rem;
-  color: rgb(46, 46, 46);
+  color: rgb(255, 254, 254);
 }
 a:hover {
   text-decoration: none;
-  color: rgb(29, 195, 255);
+  color: rgb(13, 72, 94);
+}
+.navigation {
+  background: #3dc49e;
 }

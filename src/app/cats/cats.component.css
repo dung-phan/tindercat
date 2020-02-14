@@ -1,4 +1,5 @@
 .card {
+  margin-top: 2rem;
   background: white;
   border: 0.7px solid rgb(182, 182, 182);
   box-shadow: 0.3rem 0.3rem rgb(240, 240, 240);
@@ -15,6 +16,13 @@ img {
   width: 18rem;
   height: 18rem;
   object-fit: cover;
+}
+.description {
+  padding: 5px 8px;
+}
+h6 {
+  font-size: 0.9rem;
+  color: grey !important;
 }
 .footer {
   margin-left: auto;
@@ -37,19 +45,24 @@ img {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .rate {
   width: 70px;
   height: 70px;
   border-radius: 70px;
-  border: 6px solid #f0f0f0;
+  border: 6px solid #e6e6e6;
   float: left;
+}
+.rate:nth-child(1):hover,
+.rate:nth-child(3):hover {
+  transform: scale(1.2);
 }
 .info {
   width: 40px;
   height: 40px;
   border-radius: 40px;
   background: #fff;
-  border: 5px solid #f0f0f0;
+  border: 5px solid #e6e6e6;
   float: left;
   box-shadow: 1px 1px 1px 0px #e9e9e9;
   margin-top: 14px;
@@ -58,4 +71,7 @@ img {
   background-size: 15px;
   background-position: center;
   background-repeat: no-repeat;
+}
+button {
+  outline: none;
 }
