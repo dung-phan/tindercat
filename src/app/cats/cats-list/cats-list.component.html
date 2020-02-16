@@ -3,7 +3,9 @@
   <div class="row">
     <ul *ngIf="loadedBreeds && loadedBreeds.length >= 1">
       <li *ngFor="let breed of loadedBreeds" class="col-5">
-        <a routerLink="{{ breed.id }}">{{ breed.name }}</a>
+        <a routerLinkActive="active" routerLink="{{ breed.id }}">{{
+          breed.name
+        }}</a>
       </li>
     </ul>
   </div>

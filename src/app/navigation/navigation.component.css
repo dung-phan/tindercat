@@ -8,9 +8,63 @@ li {
 }
 a {
   font-size: 1rem;
-  color: rgb(46, 46, 46);
+  color: rgb(255, 254, 254);
 }
 a:hover {
   text-decoration: none;
-  color: rgb(29, 195, 255);
+  color: rgb(13, 72, 94);
+}
+.navigation {
+  background: #3dc49e;
+}
+.search-box {
+  margin: 0.3rem;
+  position: absolute;
+  background: #fad6938e;
+  height: 3rem;
+  border-radius: 4rem;
+  padding: 1rem;
+}
+.search-box:hover > .search-txt {
+  width: 18rem;
+  padding: 0 7px;
+}
+
+.search-box:hover > .search-btn {
+  color: #3dc49e;
+}
+
+.search-btn {
+  float: right;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  color: white;
+  cursor: pointer;
+}
+
+.search-btn > i {
+  font-size: 1.5rem;
+}
+
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  font-size: 1.2rem;
+  color: white;
+  transition: 0.4s;
+  width: 0px;
+}
+
+::placeholder {
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  opacity: 1;
 }
