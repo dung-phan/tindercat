@@ -6,6 +6,7 @@ import {
 
 export class AuthInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler) {
+    //add the required authentication to use API
     const modifiedRequest = request.clone({
       headers: request.headers.append(
         "x-api-key",

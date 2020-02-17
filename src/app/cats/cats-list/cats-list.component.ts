@@ -4,9 +4,14 @@ import { Breed } from "./cats-details/cats-details.model";
 @Component({
   selector: "app-cats-list",
   templateUrl: "./cats-list.component.html",
-  styleUrls: ["./cats-list.component.css", "../../grid.component.css"]
+  styleUrls: [
+    "./cats-list.component.css",
+    "../../grid.component.css",
+    "../cats.component.css"
+  ]
 })
 export class CatsListComponent implements OnInit {
+  baseUrl: string = "https://api.thecatapi.com/v1/breeds/";
   loadedBreeds: Breed[] = [];
   constructor(private http: HttpClient) {}
 
@@ -15,11 +20,8 @@ export class CatsListComponent implements OnInit {
   }
 
   private fetchBreeds() {
-    this.http
-      .get<Breed[]>("https://api.thecatapi.com/v1/breeds")
-      .subscribe(breeds => {
-        console.log(breeds);
-        this.loadedBreeds = breeds;
-      });
+    this.http.get<Breed[]>(this.baseUrl).subscribe(breeds => {
+      this.loadedBreeds = breeds;
+    });
   }
 }

@@ -1,9 +1,4 @@
-export class Cat {
-  public id: string;
-  public url: string;
-
-  constructor(id: string, url: string) {
-    this.id = id;
-    this.url = url;
-  }
+export interface Cat {
+  id: string;
+  url: string;
 }

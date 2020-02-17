@@ -9,10 +9,12 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ["./cats-details.component.css"]
 })
 export class CatsDetailsComponent implements OnInit {
+  baseUrl: string = "https://api.thecatapi.com/v1/breeds/";
   loadBreed: Breed;
   breed_id: string;
   isFetching = false;
   constructor(private actRoute: ActivatedRoute, private http: HttpClient) {
+    //get the route params to fetch each breed
     this.breed_id = this.actRoute.snapshot.params.breedId;
   }
 
@@ -22,17 +24,14 @@ export class CatsDetailsComponent implements OnInit {
 
   private feedBreed() {
     this.isFetching = true;
-    this.http
-      .get<Breed>(`https://api.thecatapi.com/v1/breeds/${this.breed_id}`)
-      .subscribe(
-        breed => {
-          console.log("any breed", breed);
-          this.isFetching = false;
-          this.loadBreed = breed;
-        },
-        error => {
-          console.log(error);
-        }
-      );
+    this.http.get<Breed>(this.baseUrl + this.breed_id).subscribe(
+      breed => {
+        this.isFetching = false;
+        this.loadBreed = breed;
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 }

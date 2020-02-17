@@ -3,7 +3,7 @@
   text-align: center;
   font-size: 1.5rem;
   font-weight: 300;
-  background: rgba(62, 167, 149, 0.514);
+  background: linear-gradient(to right, #d3959b, #9ff0d9);
   margin-top: 0.3rem;
   color: white;
 }
@@ -26,7 +26,6 @@
 }
 
 p {
-  max-width: 350px;
   word-wrap: break-word;
   margin-bottom: 12px;
   line-height: 24px;
