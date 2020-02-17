@@ -1,5 +1,7 @@
 # CATINDER
 
+## [ Check out the deployed version on Firebase! ](https://catinder-2020.firebaseapp.com/)
+
 ## What this project is about
 
 My own attempt to learn and build an Angular app using the Cat API.
