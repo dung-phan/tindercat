@@ -3,7 +3,10 @@
     <app-cats-search></app-cats-search>
   </div>
   <div class="side-right">
-    <p *ngIf="loadedBreeds && loadedBreeds.length < 1">Loading...</p>
+    <div *ngIf="loadedBreeds && loadedBreeds.length < 1" class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
     <div class="row">
       <ul *ngIf="loadedBreeds && loadedBreeds.length >= 1">
         <li *ngFor="let breed of loadedBreeds" class="col-5">
@@ -12,7 +15,6 @@
           }}</a>
         </li>
       </ul>
-      
     </div>
   </div>
 </div>

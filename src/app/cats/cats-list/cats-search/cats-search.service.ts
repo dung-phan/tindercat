@@ -1,12 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import {
-  map,
-  debounceTime,
-  distinctUntilChanged,
-  switchMap
-} from "rxjs/operators";
+import { debounceTime, distinctUntilChanged, switchMap } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root"
@@ -25,9 +20,7 @@ export class CatsSearchService {
     );
   }
 
-  searchEntries(term) {
-    return this.http
-      .get(this.baseUrl + this.queryUrl + term)
-      .pipe(map(res => console.log("what is res", res)));
+  searchEntries(term: string) {
+    return this.http.get(this.baseUrl + this.queryUrl + term);
   }
 }

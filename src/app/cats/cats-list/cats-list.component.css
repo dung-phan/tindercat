@@ -3,7 +3,7 @@
       rgba(255, 255, 255, 0.7),
       rgba(255, 255, 255, 0.7)
     ),
-    url(https://image.freepik.com/free-vector/cute-colorful-kitten-pow-pattern-design_1017-14710.jpg);
+    url(../../images/browse_background.jpg);
   overflow-y: scroll;
   height: 75vh;
 }
