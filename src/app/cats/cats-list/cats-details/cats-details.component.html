@@ -1,1 +1,25 @@
-<p>cats-details works! {{ breed_id }}</p>
+<div *ngIf="loadBreed" class="name">
+  {{ loadBreed.name }}
+</div>
+<div class="frame">
+  <div class="frame-left" *ngIf="loadBreed">
+    <p class="from-me">
+      Hey, just curious...How would you describe yourself?
+    </p>
+    <p class="from-them">Moi? {{ loadBreed.temperament }}!!!</p>
+    <p class="from-me">Hmm...Sounds unreal...Where are you from?</p>
+    <p class="from-them">{{ loadBreed.origin }}.</p>
+  </div>
+  <div class="frame-right" *ngIf="loadBreed">
+    <p class="from-them">
+      Believe it or not, this is what hoomans talk about me: "{{
+        loadBreed.description
+      }}"
+    </p>
+    <p class="from-me">Ok...I'm impressed...</p>
+    <p class="from-them">
+      Do not mean to brag but you might want to check out my
+      <a href="{{ loadBreed.wikipedia_url }}" target="_blank">Wikipedia page</a>
+    </p>
+  </div>
+</div>
