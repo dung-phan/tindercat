@@ -1,0 +1,20 @@
+ul {
+  margin: 0;
+}
+li {
+  list-style: none;
+  display: inline-block;
+  padding: 1rem;
+}
+a {
+  font-size: 1rem;
+  color: rgb(255, 254, 254);
+}
+a:hover {
+  text-decoration: none;
+  color: rgb(13, 72, 94);
+}
+.navigation {
+  background: #3dc49e;
+}
+

@@ -1,0 +1,23 @@
+<div class="search">
+  <h4>Search for breeds</h4>
+  <div class="search-box">
+    <input
+      type="text"
+      name=""
+      class="search-txt"
+      (keyup)="searchTerm$.next($event.target.value)"
+    />
+    <span class="search-btn">
+      <i class="icon ion-ios-search"></i>
+    </span>
+  </div>
+</div>
+<div class="search-results">
+  <ul *ngIf="results">
+    <li *ngFor="let result of results | slice: 0:9">
+      <a routerLinkActive="active" routerLink="{{ result.id }}">
+        {{ result.name }}
+      </a>
+    </li>
+  </ul>
+</div>

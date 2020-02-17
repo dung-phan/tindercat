@@ -1,0 +1,18 @@
+<div class="big-container">
+  <div class="side-left">
+    <app-cats-search></app-cats-search>
+  </div>
+  <div class="side-right">
+    <p *ngIf="loadedBreeds && loadedBreeds.length < 1">Loading...</p>
+    <div class="row">
+      <ul *ngIf="loadedBreeds && loadedBreeds.length >= 1">
+        <li *ngFor="let breed of loadedBreeds" class="col-5">
+          <a routerLinkActive="active" routerLink="{{ breed.id }}">{{
+            breed.name
+          }}</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="card">
+  <div *ngIf="isFetching" class="spinner">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+  </div>
+  <img *ngIf="loadCat" [src]="loadCat.url" alt="{{ loadCat.id }}" />
+  <div class="description" *ngIf="loadCat">
+    <h5>Meoww!</h5>
+    <h6>Hoomans are our best servants!</h6>
+  </div>
+</div>
+<div class="footer">
+  <button
+    id="swipe_dislike"
+    class="rate"
+    (click)="voteDown({ image_id: loadCat.id, value: 0 })"
+  ></button>
+  <div class="info"></div>
+  <button
+    id="swipe_like"
+    class="rate"
+    (click)="voteUp({ image_id: loadCat.id, value: 1 })"
+  ></button>
+</div>
