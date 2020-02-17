@@ -9,6 +9,10 @@
   -webkit-font-smoothing: antialiased;
   color: rgb(7, 7, 7);
 }
+body {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
 .background {
   height: 100vh;
   background: linear-gradient(to right, #bb617a, #ffc85ae8);

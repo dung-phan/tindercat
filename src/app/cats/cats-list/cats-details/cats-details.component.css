@@ -78,3 +78,9 @@ p:after {
   border-bottom-right-radius: 10px;
   transform: translate(-30px, -2px);
 }
+a {
+  color: rgb(39, 156, 252);
+}
+a:hover {
+  color: rgb(24, 102, 165);
+}

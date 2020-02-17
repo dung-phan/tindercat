@@ -16,6 +16,12 @@
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
+a {
+  color: rgb(39, 156, 252);
+}
+a:hover {
+  color: rgb(24, 102, 165);
+}
 li {
   list-style: none;
 }
@@ -25,7 +31,7 @@ p {
 .side-left {
   width: 40%;
   background: linear-gradient(to right, #d3959b, #9ff0d9);
-  height: 350%;
+  height: 300%;
   display: inline-block;
   float: left;
 }

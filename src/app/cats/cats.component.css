@@ -20,7 +20,14 @@ img {
 .description {
   padding: 5px 8px;
 }
+h5 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
+}
 h6 {
+  margin: 0;
+  font-weight: 500;
   font-size: 0.9rem;
   color: grey !important;
 }
