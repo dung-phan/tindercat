@@ -1,4 +1,4 @@
-.container {
+.big-container {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.7),
       rgba(255, 255, 255, 0.7)
@@ -21,4 +21,16 @@ li {
 }
 p {
   color: rgb(37, 37, 37);
+}
+.side-left {
+  width: 40%;
+  background: linear-gradient(to right, #d3959b, #9ff0d9);
+  height: 350%;
+  display: inline-block;
+  float: left;
+}
+.side-right {
+  display: inline-block;
+  width: 60%;
+  float: right;
 }

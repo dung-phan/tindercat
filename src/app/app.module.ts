@@ -11,6 +11,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { HomeComponent } from "./home/home.component";
 import { CatsDetailsComponent } from "./cats/cats-list/cats-details/cats-details.component";
 import { AuthInterceptor } from "./cats/auth-interceptor.service";
+import { CatsSearchComponent } from './cats/cats-list/cats-search/cats-search.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AuthInterceptor } from "./cats/auth-interceptor.service";
     CatsComponent,
     CatsListComponent,
     HomeComponent,
-    CatsDetailsComponent
+    CatsDetailsComponent,
+    CatsSearchComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [
