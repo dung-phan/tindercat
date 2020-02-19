@@ -26,7 +26,6 @@
 }
 
 .search-txt {
-  border: none;
   background: none;
   outline: none;
   float: left;
@@ -53,4 +52,15 @@ a {
 }
 a:hover {
   color: rgb(24, 102, 165);
+}
+.ng-valid[required],
+.ng-valid.required {
+  border: none;
+}
+
+.ng-invalid:not(form) {
+  border: 1px solid rgba(255, 0, 0, 0.589); /* red */
+  width: 15rem;
+  height: 2rem;
+  border-radius: 2rem;
 }

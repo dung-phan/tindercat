@@ -1,12 +1,16 @@
 <div class="search">
   <h4>Search for breeds</h4>
   <div class="search-box">
-    <input
-      type="text"
-      name=""
-      class="search-txt"
-      (keyup)="searchTerm$.next($event.target.value)"
-    />
+    <form ngNativeValidate>
+      <input
+        type="text"
+        name="term"
+        required
+        ngModel
+        class="search-txt"
+        (keyup)="searchTerm$.next($event.target.value)"
+      />
+    </form>
     <span class="search-btn">
       <i class="icon ion-ios-search"></i>
     </span>
